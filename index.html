@@ -430,6 +430,25 @@
 
   gtag('config', 'AW-18404692419');
 </script>
+<!-- Event snippet for Outbound click conversion page
+In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+<script>
+function gtag_report_conversion(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+      'send_to': 'AW-18404692419/kyW1CNPdjeYcEMOjhchE',
+      'value': 1.0,
+      'currency': 'INR',
+      'event_callback': callback
+  });
+  return false;
+}
+</script>
+
 <body>
   <header class="site-header">
     <a class="brand" href="#home" aria-label="shadow Electronics home">
@@ -456,7 +475,7 @@
         </div>
       </div>
       <div class="hero-poster" aria-label="shadow Electronics service poster">
-        <a href="https://wa.me/919798417768?text=I%20want%20to%20know%20more" onclick="return gtag_report_conversion(this.href)" rel="noopener noreferrer">
+        <a href="https://wa.me/919973567641?text=I%20want%20to%20know%20more" onclick="return gtag_report_conversion(this.href)" rel="noopener noreferrer">
           <img src="shadow.png" alt="shadow best services poster with WhatsApp click to chat">
         </a>
       </div>
@@ -504,7 +523,7 @@
           <h2>Contact</h2>
           <p>Ready to book a service or ask about a repair? Send a message and share the product details.</p>
         </div>
-        <a class="whatsapp" href="https://wa.me/919798417768?text=I%20want%20to%20know%20more" onclick="return gtag_report_conversion(this.href)" rel="noopener">WhatsApp Click To Chat</a>
+        <a class="whatsapp" href="https://wa.me/919973567641?text=I%20want%20to%20know%20more" onclick="return gtag_report_conversion(this.href)" rel="noopener">WhatsApp Click To Chat</a>
       </div>
       <ul class="contact-list">
         <li>Business: shadow Electronics</li>
